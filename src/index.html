@@ -10,41 +10,19 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
-    <style>
-      .input__box {
-        height: 400px;
-        width: 600px;
-        background-image: linear-gradient(to top right, rgb(132, 168, 245), rgb(85, 6, 100));
-        background-size: contain;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        left: 50%;
-        top: 5%;
-        transform: translateX(-50%);
-      }
-      .input__title {
-        display: flex;
-        justify-content: center;
-        font-size: 40px;
-      }
-      .input__text {
-        height: 50px;
-        font-size: 35px;
-        color: navy;
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-    </style>
   </head>
   <body>
     <!-- <include src="./partials/example.html"></include> -->
-    <div class="input__box">
-      <h1 class="input__title">Search a country</h1>
-      <input class="input__text" type="text" />
-    </div>
+    <section class="section">
+      <div class="input__box">
+        <h1 class="input__title">Search a country</h1>
+        <input class="input__text" type="text" />
+      </div>
+      <div class="render_box"></div>
+    </section>
+
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+    <script src="renderResulr.js"></script>
   </body>
 </html>

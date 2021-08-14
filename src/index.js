@@ -2,7 +2,7 @@ import { error, notice } from '@pnotify/core';
 
 const debounce = require('lodash.debounce');
 
-import fetchCountries from '../fetchCountries';
+import fetchCountries from './fetchCountries';
 import countryListMarkup from './templates/countriesList.hbs';
 import countryCardMarkup from './templates/countryCard.hbs';
 

@@ -1,11 +1,11 @@
-import { error, notice } from '@pnotify/core';
-
-const debounce = require('lodash.debounce');
+import './sass/main.scss';
+import { notice, error } from '@pnotify/core';
 
 import fetchCountries from './fetchCountries';
 import countryListMarkup from './templates/countriesList.hbs';
 import countryCardMarkup from './templates/countryCard.hbs';
 
+const debounce = require('lodash.debounce');
 const refs = {
   input: document.querySelector('.input__text'),
   renderBox: document.querySelector('.render_box'),
@@ -56,6 +56,7 @@ function noticeMessage() {
     title: 'Attention',
     text: 'To many results, try to specify your search.',
     width: '300px',
+    minHeight: '30px',
     delay: 2000,
   });
 }
@@ -65,6 +66,7 @@ function errorMessage() {
     title: 'Error',
     text: 'No matchs found!',
     width: '300px',
+    minHeight: '30px',
     delay: 2000,
   });
 }
@@ -74,7 +76,7 @@ function errorServerMessage() {
     title: 'Error',
     text: 'Some things goes wrong, try again later',
     width: '300px',
-    shadow: true,
+    minHeight: '30px',
     delay: 2000,
   });
 }

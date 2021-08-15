@@ -1,5 +1,6 @@
 import './sass/main.scss';
-import { notice, error } from '@pnotify/core';
+import '@pnotify/core/dist/BrightTheme.css';
+import { notice, error, Stack } from '@pnotify/core';
 
 import fetchCountries from './fetchCountries';
 import countryListMarkup from './templates/countriesList.hbs';
@@ -56,7 +57,7 @@ function noticeMessage() {
     title: 'Attention',
     text: 'To many results, try to specify your search.',
     width: '300px',
-    minHeight: '30px',
+    minHeight: '15px',
     delay: 2000,
   });
 }
@@ -66,7 +67,7 @@ function errorMessage() {
     title: 'Error',
     text: 'No matchs found!',
     width: '300px',
-    minHeight: '30px',
+    minHeight: '15px',
     delay: 2000,
   });
 }
@@ -76,7 +77,7 @@ function errorServerMessage() {
     title: 'Error',
     text: 'Some things goes wrong, try again later',
     width: '300px',
-    minHeight: '30px',
+    minHeight: '15px',
     delay: 2000,
   });
 }
